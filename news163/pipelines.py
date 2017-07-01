@@ -10,8 +10,6 @@ import pymongo
 
 class MongoPipeline(object):
 
-    collection_name = '163news'
-
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
         self.mongo_db = mongo_db
@@ -31,5 +29,5 @@ class MongoPipeline(object):
         self.client.close()
 
     def process_item(self, item, spider):
-        self.db[self.collection_name].update({'title': item['title']}, dict(item), True)
+        self.db[item['category']].update({'title': item['title']}, dict(item), True)
         return item

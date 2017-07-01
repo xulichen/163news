@@ -14,5 +14,6 @@ class News163Item(Item):
     post_time = Field()
     post_source = Field()
     ep_editor = Field()
+    category = Field()
     # post_comment_tiecount = Field()
     # post_comment_joincount = Field()

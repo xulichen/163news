@@ -90,3 +90,5 @@ ITEM_PIPELINES = {
 
 MONGO_URI = 'localhost'
 MONGO_DATABASE = '163news'
+
+DOWNLOAD_DELAY = 0.2
